@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://grjtlsfpftr0"]
+
+[ext_resource type="Script" path="res://camera_2d.gd" id="1_ffhiu"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(160, 90)
+limit_left = -352
+limit_top = -312
+limit_right = 680
+limit_bottom = 448
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+script = ExtResource("1_ffhiu")
+
+[node name="Limits" type="Node" parent="."]
+
+[node name="TopLeft" type="Marker2D" parent="Limits"]
+
+[node name="BottomRight" type="Marker2D" parent="Limits"]
+position = Vector2(320, 180)

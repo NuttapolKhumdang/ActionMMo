@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2okub7g8qg5e"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_p587t"]
+[ext_resource type="Theme" uid="uid://jad844isstev" path="res://theme.tres" id="2_5qs4j"]
+[ext_resource type="Texture2D" uid="uid://dsivu0fgytywd" path="res://World/GrassBackground.png" id="2_m7uvh"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p587t")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(271, 182)
+texture = ExtResource("2_m7uvh")
+region_enabled = true
+region_rect = Rect2(0, 0, 1200, 1000)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -60.0
+offset_right = 106.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_5qs4j")
+theme_override_font_sizes/font_size = 12
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_5qs4j")
+theme_override_font_sizes/font_size = 12
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 73.0
+grow_horizontal = 2
+theme = ExtResource("2_5qs4j")
+theme_override_font_sizes/font_size = 32
+text = "Action MMO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -60.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="BoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_5qs4j")
+theme_override_font_sizes/font_size = 6
+text = "[Controls]
+AWSD -  Walk
+F, MbL - Attack
+Shift, MbR - Roll
+
+[Stats]
+HP - Heath Point
+STA - Stamina
+EXP - Experience Point
+
+[Cradit]
+Project 1st of Nuttapol Khumdang
+All of Texture and Artwork by HeartBeast
+
+v.1.0.0"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
