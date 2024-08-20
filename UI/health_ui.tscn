@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ukkloxams25"]
+
+[ext_resource type="Script" path="res://UI/health_ui.gd" id="1_1pa3q"]
+[ext_resource type="Theme" uid="uid://jad844isstev" path="res://theme.tres" id="2_jca4p"]
+
+[node name="HealthUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 60.0
+offset_bottom = 11.0
+script = ExtResource("1_1pa3q")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 12.0
+offset_right = 84.0
+offset_bottom = 4.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = -5.0
+offset_right = 83.0
+offset_bottom = 9.0
+theme = ExtResource("2_jca4p")
+theme_override_font_sizes/font_size = 5
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_top = -5.0
+offset_right = 12.0
+offset_bottom = 9.0
+theme = ExtResource("2_jca4p")
+theme_override_font_sizes/font_size = 5
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1

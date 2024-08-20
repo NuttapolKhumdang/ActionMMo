@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cha3geehulamp"]
+
+[ext_resource type="Theme" uid="uid://jad844isstev" path="res://theme.tres" id="1_rophe"]
+
+[node name="StatsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 88.0
+offset_bottom = 4.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 84.0
+offset_bottom = 4.0
+theme = ExtResource("1_rophe")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -5.0
+offset_right = 83.0
+offset_bottom = 9.0
+theme = ExtResource("1_rophe")
+theme_override_font_sizes/font_size = 5
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_top = -5.0
+offset_right = 12.0
+offset_bottom = 9.0
+theme = ExtResource("1_rophe")
+theme_override_font_sizes/font_size = 5
+text = "TIL
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Update" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = -5.0
+offset_right = 96.0
+offset_bottom = 9.0
+theme = ExtResource("1_rophe")
+theme_override_font_sizes/font_size = 5
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]

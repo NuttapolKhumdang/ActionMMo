@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://clfc6dapl433s"]
+
+[ext_resource type="PackedScene" uid="uid://beuj3ahqwlvs0" path="res://stats.tscn" id="1_30rbb"]
+
+[node name="PlayerStats" instance=ExtResource("1_30rbb")]
+max_health = 6
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

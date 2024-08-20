@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c57i3vrqjxago"]
+
+[ext_resource type="Script" path="res://UI/stamina_ui.gd" id="1_fn27y"]
+[ext_resource type="Theme" uid="uid://jad844isstev" path="res://theme.tres" id="2_56d88"]
+
+[node name="StaminaUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 8.0
+script = ExtResource("1_fn27y")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 84.0
+offset_bottom = 4.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -4.0
+offset_right = 84.0
+offset_bottom = 10.0
+theme = ExtResource("2_56d88")
+theme_override_font_sizes/font_size = 5
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 12.0
+offset_bottom = 10.0
+theme = ExtResource("2_56d88")
+theme_override_font_sizes/font_size = 5
+text = "STA"
+horizontal_alignment = 1
+vertical_alignment = 1
